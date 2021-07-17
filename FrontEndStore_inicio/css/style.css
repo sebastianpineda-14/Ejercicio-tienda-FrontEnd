@@ -2,10 +2,11 @@
 	--primario: #9C27B0;
 	--primarioOscuro: #89119D;
 	--secundario: #FFCE00;
-	--secundarioOscuro: rgb(233,287,2)
-	--blanco:  #fff;
+	--secundarioOscuro: rgb(233,287,2);
+	--blanco: #fff;
 	--negro: #000;
-	--fuentePrincipal: font-family: 'Nunito', sans-serif;
+	
+	--fuentePrincipal: 'Staatliches', cursive;
 }
 
 html {
@@ -16,7 +17,7 @@ html {
   box-sizing: inherit;
 }
 
-body{
+body {
 	background-color: var(--primario);
 	font-size: 1.6rem;
 	line-height: 1.5;
@@ -27,20 +28,20 @@ p {
 	color: var(--blanco);
 }
 
-a{
+a {
 	text-decoration: none;
 }
 
-img{
+img {
 	width: 100%;
 }
 
-.contenedor{
+.contenedor {
 	max-width: 120rem;
 	margin: 0 auto;
 }
 
-h1,h2,h3{
+h1,h2,h3 {
 	text-align: center;
 	color: var(--secundario);
 	font-family: var(--fuentePrincipal);
@@ -50,4 +51,90 @@ h1{font-size: 4rem;}
 h2{font-size: 3.2rem;}
 h3{font-size: 2.4rem;}
 
+/** Header **/
 
+.header {
+	display: flex;
+	justify-content: center;
+}
+
+.header__logo {
+	margin: 3rem 0;
+}
+
+.navegacion {
+	background-color: var(--primarioOscuro);
+	padding: 1rem;
+	display: flex;
+	justify-content: center;
+	gap: 2rem; 
+}
+
+.navegacion__enlace {
+	font-family: var(--fuentePrincipal);
+	color: var(--blanco);
+	font-size: 3rem;
+}
+
+.navegacion__enlace--activo,
+.navegacion__enlace:hover {
+	color: var(--secundario);
+}
+
+/**Footer**/
+.footer {
+	background-color: var(--primarioOscuro);
+	padding: 1rem;
+	margin-top: 2rem;
+}
+
+.footer__texto {
+	font-family: var(--fuentePrincipal);
+	text-align: center;
+	font-size: 2.2rem;
+}
+
+
+/** Grid **/
+.grid{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2rem;
+
+}
+@media(min-width: 768px){
+	.grid{
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+/** Productos **/ 
+.producto{
+	background-color: var(--primarioOscuro);
+	padding: 1rem;
+}
+
+.producto__imagen{
+	width: 100%; /*Imagen responsiva*/
+}
+
+.producto__informacion{
+
+}
+
+.producto__nombre{
+	font-size: 4rem;
+}
+
+.producto__precio{
+	font-size: 2.8rem;
+	color: var(--secundario);
+}
+
+.producto__nombre,
+.producto__precio{
+	font-family: var(--fuentePrincipal);
+	margin: 1rem 0;
+	text-align: center;
+	line-height: 1.2;
+}
